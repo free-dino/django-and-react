@@ -32,7 +32,7 @@ class UserManager(BaseUserManager):
         )
         user.set_password(password)
         user.save(using=self._db)
-        
+
         return user
 
     def create_superuser(self, username, email, password, **kwargs):
@@ -43,7 +43,7 @@ class UserManager(BaseUserManager):
             raise TypeError("Superusers must have an email")
         if username is None:
             raise TypeError("Superusers must have a username")
-        
+
         user = self.create_superuser(username, email, password, **kwargs)
         user.is_superuser = True
         user.is_staff = True
