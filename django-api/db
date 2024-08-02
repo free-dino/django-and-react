@@ -1,0 +1,1 @@
+ALTER USER core WITH PASSWORD 'freedino';
